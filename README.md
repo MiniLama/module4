@@ -2,7 +2,7 @@ for ($i = 1; $i -le 5; $i++)
 
 {
 
-$itname =»"IT_" +$i
+$itname =»"IT_" + $i
 
 $itpass = "P@ssw0rd" + "$i"
 
@@ -14,9 +14,9 @@ New-ADUser -Name $itname  -Enabled $true -Path 'OU=IT,DC=nsgk, DC=ru' -AccountPa
 
 Add-ADGroupMember -Identity IT -Members $itname
 
-$salesname =» "Sales_" +$i
+$salesname =» "Sales_" + $i
 
-$salespass = "P@ssw0rd»+»$i"
+$salespass = "P@ssw0rd" + "$i"
 $salesdomen = "nsgk.ru"
 
 $salesparam = ConvertTo-SecureString -String $salespass -AsPlainText -Force
